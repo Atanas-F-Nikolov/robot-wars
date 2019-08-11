@@ -4,7 +4,7 @@ import styles from './RobotList.module.scss';
 function RobotList() {
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>Robot Wars List</h1>
+      <h1 className={styles.title}>Robot Warriors List</h1>
       <div className={styles.gridContainer}>
         <div className={styles.grid}>
           <div className={styles.gridItem}>1</div>

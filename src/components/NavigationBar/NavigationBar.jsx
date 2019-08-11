@@ -13,6 +13,7 @@ function NavigationBar() {
               to="/home"
               activeStyle={{
                 fontWeight: 'bold',
+                textDecoration: 'underline',
               }}
             >
               Home
@@ -24,6 +25,7 @@ function NavigationBar() {
               to="/robots"
               activeStyle={{
                 fontWeight: 'bold',
+                textDecoration: 'underline',
               }}
             >
               Robots

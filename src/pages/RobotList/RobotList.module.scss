@@ -1,7 +1,7 @@
 .wrapper {
   flex-grow: 1;
   text-align: center;
-  padding: 40px;
+  padding: 0 40px;
   background: #7abcff;
   background: rgba(111, 227, 204, 1);
   background: -moz-linear-gradient(top, rgba(111, 227, 204, 1) 0%, rgba(111, 227, 204, 1) 4%, rgba(8, 123, 247, 1) 100%);
@@ -15,8 +15,9 @@
 
 .title {
   font-size: 2.5rem;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 2em;
+  color: lightseagreen;
 }
 
 .gridContainer {
@@ -33,7 +34,7 @@
     background-color: #444;
     padding: 20px;
     color: #FFF;
-    font-size: 2em;
+    font-size: 2rem;
     border-radius: 4px;
     border: 1px solid #bbb;
     transition: all 0.3s linear;
