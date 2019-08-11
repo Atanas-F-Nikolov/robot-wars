@@ -2,6 +2,7 @@
   "name": "robot-wars",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://atanas-f-nikolov.github.io/robot-wars",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "normalize.css": "^8.0.1",
