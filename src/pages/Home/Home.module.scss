@@ -1,0 +1,19 @@
+.wrapper {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+  color: #f0f0f0;
+}
