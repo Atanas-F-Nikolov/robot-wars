@@ -1,22 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { CardList } from '../../components/CardList';
 import styles from './RobotList.module.scss';
 
 function RobotList() {
+  const [robots, setRobots] = useState([]);
+  const [isPending, setIsPending] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => {
+        setRobots(users);
+      })
+      .catch(err => {
+        setHasError(true);
+      })
+      .finally(() => {
+        setIsPending(false);
+      });
+  }, []);
+
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>Robot Warriors List</h1>
-      <div className={styles.gridContainer}>
-        <div className={styles.grid}>
-          <div className={styles.gridItem}>1</div>
-          <div className={styles.gridItem}>2</div>
-          <div className={styles.gridItem}>3</div>
-          <div className={styles.gridItem}>4</div>
-          <div className={styles.gridItem}>5</div>
-          <div className={styles.gridItem}>6</div>
-          <div className={styles.gridItem}>7</div>
-          <div className={styles.gridItem}>8</div>
-        </div>
-      </div>
+      {isPending && <h2 className={styles.centerMessageOnPage}>Loading...</h2>}
+      {hasError && <h2 className={styles.centerMessageOnPage}>Oops! Something went wrong.</h2>}
+      {robots.length > 0 && (
+        <>
+          <h1 className={styles.title}>Robot Warriors List</h1>
+          <CardList robots={robots}></CardList>
+        </>
+      )}
     </div>
   );
 }
