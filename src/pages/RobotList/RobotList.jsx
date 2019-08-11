@@ -13,13 +13,16 @@ function RobotList() {
       .then(response => response.json())
       .then(users => {
         setRobots(users);
+        setIsPending(false);
       })
       .catch(err => {
         setHasError(true);
-      })
-      .finally(() => {
         setIsPending(false);
       });
+    // EDGE complains about unsupported finally
+    // .finally(() => {
+    //   setIsPending(false);
+    // });
   }, []);
 
   return (
