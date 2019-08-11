@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.wrapper}>
       <h1>Robot Wars</h1>
     </div>
   );
