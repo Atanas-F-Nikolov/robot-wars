@@ -7,7 +7,7 @@ function CardList({ robots }) {
     <div className={styles.wrapper}>
       <div className={styles.grid}>
         {robots.map(robot => (
-          <GeneralCard robot={robot}></GeneralCard>
+          <GeneralCard key={robot.id} robot={robot}></GeneralCard>
         ))}
       </div>
     </div>
