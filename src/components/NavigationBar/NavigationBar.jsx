@@ -10,7 +10,8 @@ function NavigationBar() {
           <li className={styles.navItem}>
             <NavLink
               className={styles.navLink}
-              to="/home"
+              exact
+              to="/"
               activeStyle={{
                 fontWeight: 'bold',
                 textDecoration: 'underline',
