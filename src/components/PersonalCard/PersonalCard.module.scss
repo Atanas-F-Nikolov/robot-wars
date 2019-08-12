@@ -1,0 +1,53 @@
+.wrapper {
+  position: relative;
+}
+
+.table {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+
+  & th {
+    padding: 0 10px;
+  }
+
+  & .cellName {
+    color: orangered;
+    text-align: left
+  }
+
+  & .cellValue {
+    text-align: left
+  }
+}
+
+.robotImg {
+  position: absolute;
+  left: 30px;
+  top: -180px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .table {
+    font-size: 1.25rem;
+    margin-top: 180px;
+
+  }
+
+  .robotImg {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .table {
+    font-size: 1rem;
+  }
+}

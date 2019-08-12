@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './PageNotFound.module.scss';
-import sadRobbot from './404-robot.png';
+import sadRobot from './404-robot.png';
 
 function PageNotFound() {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.robbotImg} src={sadRobbot} alt="Sad robbot - page not found" />
-      <h1>Page not found!</h1>
+      <img className={styles.robotImg} src={sadRobot} alt="Sad robot - page not found" />
+      <h1>Page/Robot not found!</h1>
     </div>
   );
 }

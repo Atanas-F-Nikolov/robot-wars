@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Card.module.scss';
+import styles from './GeneralCard.module.scss';
 
-function Card({ robot }) {
+function GeneralCard({ robot }) {
   return (
     <Link className={styles.link} to={`/robots/${robot.id}`}>
       <h4 className={styles.marginReset}>{robot.id}</h4>
@@ -12,4 +12,4 @@ function Card({ robot }) {
   );
 }
 
-export default Card;
+export default GeneralCard;

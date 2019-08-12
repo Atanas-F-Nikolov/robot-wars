@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../Card';
+import { GeneralCard } from '../GeneralCard';
 import styles from './CardList.module.scss';
 
 function CardList({ robots }) {
@@ -7,7 +7,7 @@ function CardList({ robots }) {
     <div className={styles.wrapper}>
       <div className={styles.grid}>
         {robots.map(robot => (
-          <Card robot={robot}></Card>
+          <GeneralCard robot={robot}></GeneralCard>
         ))}
       </div>
     </div>
