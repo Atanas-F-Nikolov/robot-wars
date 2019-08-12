@@ -8,28 +8,32 @@ function RobotList() {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    // Cancelling a Promise with React.useEffect
+    // https://juliangaramendy.dev/use-promise-subscription/
+    let isSubscribed = true;
     setIsPending(true);
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => {
-        setRobots(users);
-        setIsPending(false);
+        if (isSubscribed) {
+          setRobots(users);
+          setIsPending(false);
+        }
       })
       .catch(err => {
-        setHasError(true);
-        setIsPending(false);
+        if (isSubscribed) {
+          setHasError(true);
+          setIsPending(false);
+        }
       });
-    // EDGE complains about unsupported finally
-    // .finally(() => {
-    //   setIsPending(false);
-    // });
+    return () => (isSubscribed = false);
   }, []);
 
   return (
     <div className={styles.wrapper}>
-      {isPending && <h2 className={styles.centerMessageOnPage}>Loading...</h2>}
-      {hasError && <h2 className={styles.centerMessageOnPage}>Oops! Something went wrong.</h2>}
-      {robots.length > 0 && (
+      {isPending && <h2 className={styles.centerTextOnPage}>Loading...</h2>}
+      {hasError && <h2 className={styles.centerTextOnPage}>Oops! Something went wrong.</h2>}
+      {!isPending && !hasError && robots.length > 0 && (
         <>
           <h1 className={styles.title}>Robot Warriors List</h1>
           <CardList robots={robots}></CardList>

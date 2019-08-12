@@ -9,6 +9,9 @@ function RobotView(props) {
   const [value, setValue] = useState('');
 
   useEffect(() => {
+    // Cancelling a Promise with React.useEffect
+    // https://juliangaramendy.dev/use-promise-subscription/
+    let isSubscribed = true;
     setIsPending(true);
     fetch(`https://jsonplaceholder.typicode.com/users/${props.match.params.id}`)
       .then(response => {
@@ -19,13 +22,18 @@ function RobotView(props) {
         }
       })
       .then(user => {
-        setRobot(user);
-        setIsPending(false);
+        if (isSubscribed) {
+          setRobot(user);
+          setIsPending(false);
+        }
       })
       .catch(err => {
-        setHasError(true);
-        setIsPending(false);
+        if (isSubscribed) {
+          setHasError(true);
+          setIsPending(false);
+        }
       });
+    return () => (isSubscribed = false);
   }, [props.match.params.id]);
 
   const handleChange = e => {
@@ -42,7 +50,12 @@ function RobotView(props) {
     <form className={styles.form} onSubmit={handleSubmit}>
       <label className={styles.formLabel}>
         Send your instructions to the robot:
-        <textarea className={styles.formTextarea} value={value} onChange={handleChange} placeholder="See instructions in the console..." />
+        <textarea
+          className={styles.formTextarea}
+          value={value}
+          onChange={handleChange}
+          placeholder="See instructions in the console..."
+        />
       </label>
       <input className={styles.submitButton} type="submit" value="INSTRUCT" />
     </form>
@@ -50,9 +63,9 @@ function RobotView(props) {
 
   return (
     <div className={styles.wrapper}>
-      {isPending && <h2 className={styles.centerMessageOnPage}>Loading...</h2>}
-      {hasError && <h2 className={styles.centerMessageOnPage}>Oops! Something went wrong.</h2>}
-      {robot.id && (
+      {isPending && <h2 className={styles.centerTextOnPage}>Loading...</h2>}
+      {hasError && <h2 className={styles.centerTextOnPage}>Oops! Something went wrong.</h2>}
+      {!isPending && !hasError && robot.id && (
         <>
           <h1 className={styles.title}>Robot Personal Card</h1>
           <div className={styles.container}>
