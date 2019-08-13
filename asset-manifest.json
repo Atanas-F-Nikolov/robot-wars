@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad5511c1.chunk.css",
-    "main.js": "/static/js/main.e4beabd9.chunk.js",
-    "main.js.map": "/static/js/main.e4beabd9.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.3ed84f36.js",
-    "runtime~main.js.map": "/static/js/runtime~main.3ed84f36.js.map",
-    "static/js/2.b3775bbe.chunk.js": "/static/js/2.b3775bbe.chunk.js",
-    "static/js/2.b3775bbe.chunk.js.map": "/static/js/2.b3775bbe.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.32deaf00dfdd76391be23f8ec9515353.js": "/precache-manifest.32deaf00dfdd76391be23f8ec9515353.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.ad5511c1.chunk.css.map": "/static/css/main.ad5511c1.chunk.css.map",
-    "static/media/404-robot.png": "/static/media/404-robot.b6ae6f03.png",
-    "static/media/Home.module.scss": "/static/media/cover.caa1ffe9.jpg"
+    "main.css": "/robot-wars/static/css/main.fd0d8090.chunk.css",
+    "main.js": "/robot-wars/static/js/main.61548ee0.chunk.js",
+    "main.js.map": "/robot-wars/static/js/main.61548ee0.chunk.js.map",
+    "runtime~main.js": "/robot-wars/static/js/runtime~main.e7f4175e.js",
+    "runtime~main.js.map": "/robot-wars/static/js/runtime~main.e7f4175e.js.map",
+    "static/js/2.b3775bbe.chunk.js": "/robot-wars/static/js/2.b3775bbe.chunk.js",
+    "static/js/2.b3775bbe.chunk.js.map": "/robot-wars/static/js/2.b3775bbe.chunk.js.map",
+    "index.html": "/robot-wars/index.html",
+    "precache-manifest.b964680861d36aaee1ee2b04b2f1a097.js": "/robot-wars/precache-manifest.b964680861d36aaee1ee2b04b2f1a097.js",
+    "service-worker.js": "/robot-wars/service-worker.js",
+    "static/css/main.fd0d8090.chunk.css.map": "/robot-wars/static/css/main.fd0d8090.chunk.css.map",
+    "static/media/404-robot.png": "/robot-wars/static/media/404-robot.b6ae6f03.png",
+    "static/media/Home.module.scss": "/robot-wars/static/media/cover.caa1ffe9.jpg"
   }
 }
