@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PersonalCard } from '../../components/PersonalCard';
+import { PersonalRoboCard } from '../../components/PersonalRoboCard';
 import styles from './RobotView.module.scss';
 
 function RobotView(props) {
@@ -34,7 +34,7 @@ function RobotView(props) {
         }
       });
     return () => (isSubscribed = false);
-  }, [props.match.params.id]);
+  }, [props.history, props.match.params.id]);
 
   const handleChange = e => {
     setValue(e.target.value);
@@ -69,7 +69,7 @@ function RobotView(props) {
         <>
           <h1 className={styles.title}>Robot Personal Card</h1>
           <div className={styles.container}>
-            <PersonalCard robot={robot}></PersonalCard>
+            <PersonalRoboCard robot={robot}></PersonalRoboCard>
             {renderForm()}
           </div>
         </>

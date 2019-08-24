@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './PersonalCard.module.scss';
+import styles from './PersonalRoboCard.module.scss';
 
-function PersonalCard({ robot }) {
+function PersonalRoboCard({ robot }) {
   return (
     <div className={styles.wrapper}>
       <img
@@ -39,4 +39,4 @@ function PersonalCard({ robot }) {
   );
 }
 
-export default PersonalCard;
+export default PersonalRoboCard;

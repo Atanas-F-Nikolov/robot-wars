@@ -1,4 +1,6 @@
 .link {
+  flex: 1 200px;
+  margin: 10px;
   background-color: #444;
   padding: 20px;
   color: #FFF;
@@ -22,6 +24,13 @@
   margin-bottom: 0;
 }
 
-.marginReset {
+.roboId {
   margin: 0
+}
+
+@supports (display: grid) {
+  .link {
+    margin: 0;
+    flex: 1 auto;
+  }
 }

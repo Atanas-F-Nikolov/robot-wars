@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CardList } from '../../components/CardList';
+import { Grid } from '../../components/Grid';
 import styles from './RobotList.module.scss';
 
 function RobotList() {
@@ -36,7 +36,7 @@ function RobotList() {
       {!isPending && !hasError && robots.length > 0 && (
         <>
           <h1 className={styles.title}>Robot Warriors List</h1>
-          <CardList robots={robots}></CardList>
+          <Grid robots={robots}></Grid>
         </>
       )}
     </div>
