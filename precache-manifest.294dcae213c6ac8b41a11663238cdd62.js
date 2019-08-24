@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40630d20c6561deffb5d6130e2176dcd",
+    "revision": "d2c716a540a438d227ffe199ce0d9ac9",
     "url": "/robot-wars/index.html"
   },
   {
-    "revision": "eea77d55a13a60f18b25",
-    "url": "/robot-wars/static/css/main.fd0d8090.chunk.css"
+    "revision": "3263eab85277a5b0d87a",
+    "url": "/robot-wars/static/css/main.5f11f12c.chunk.css"
   },
   {
-    "revision": "ba09ef1b52cce4b89878",
-    "url": "/robot-wars/static/js/2.b3775bbe.chunk.js"
+    "revision": "27035284f920d20b4aa4",
+    "url": "/robot-wars/static/js/2.dfefd011.chunk.js"
   },
   {
-    "revision": "eea77d55a13a60f18b25",
-    "url": "/robot-wars/static/js/main.0f2e2b06.chunk.js"
+    "revision": "3263eab85277a5b0d87a",
+    "url": "/robot-wars/static/js/main.3ca0de43.chunk.js"
   },
   {
     "revision": "2f8a8e8b66d66bdf35c9",
